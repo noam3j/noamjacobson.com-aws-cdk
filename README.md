@@ -1,6 +1,14 @@
-# Welcome to your CDK TypeScript project
+# noamjacobson.com
 
-This is a blank project for CDK development with TypeScript.
+This is the CDK project that builds the resources to host the noamjacobson.com website.
+
+## Setup notes
+
+I followed https://docs.aws.amazon.com/cdk/v2/guide/work-with-cdk-typescript.html and https://dev.to/ryands17/deploying-a-spa-using-aws-cdk-typescript-4ibf to set up this code.
+
+I also had to enable OAuth between AWS and Github. I had to do that from the Codebuild UI
+
+## Instructions
 
 The `cdk.json` file tells the CDK Toolkit how to execute your app.
 

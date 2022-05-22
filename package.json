@@ -8,14 +8,20 @@
     "build": "tsc",
     "watch": "tsc -w",
     "test": "jest",
-    "cdk": "cdk"
+    "cdk": "cdk",
+    "prepare": "husky install"
   },
   "devDependencies": {
     "@types/jest": "^27.5.0",
     "@types/node": "10.17.27",
     "@types/prettier": "2.6.0",
+    "@typescript-eslint/eslint-plugin": "^5.25.0",
+    "@typescript-eslint/parser": "^5.25.0",
     "aws-cdk": "2.25.0",
+    "eslint": "^8.16.0",
+    "husky": "^8.0.1",
     "jest": "^27.5.1",
+    "lint-staged": "^12.4.1",
     "prettier": "2.6.2",
     "ts-jest": "^27.1.4",
     "ts-node": "^10.7.0",
@@ -23,7 +29,20 @@
   },
   "dependencies": {
     "aws-cdk-lib": "2.25.0",
+    "dotenv": "^16.0.1",
     "constructs": "^10.0.0",
     "source-map-support": "^0.5.21"
+  },
+  "lint-staged": {
+    "*.{js,ts,json}": [
+      "prettier --write",
+      "eslint --cache --fix"
+    ],
+    "*.md": [
+      "prettier --write"
+    ]
+  },
+  "prettier": {
+    "singleQuote": true
   }
 }
